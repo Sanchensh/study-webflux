@@ -1,8 +1,8 @@
-package com.example.service.impl;
+package com.mrxu.service.impl;
 
-import com.example.dao.UserDao;
-import com.example.pojo.User;
-import com.example.service.UserService;
+import com.mrxu.dao.UserDao;
+import com.mrxu.pojo.User;
+import com.mrxu.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;

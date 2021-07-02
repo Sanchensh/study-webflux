@@ -1,6 +1,6 @@
-package com.example.dao;
+package com.mrxu.dao;
 
-import com.example.pojo.User;
+import com.mrxu.pojo.User;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

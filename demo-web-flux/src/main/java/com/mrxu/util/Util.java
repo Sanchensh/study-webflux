@@ -1,6 +1,6 @@
-package com.example.util;
+package com.mrxu.util;
 
-import com.example.pojo.User;
+import com.mrxu.pojo.User;
 
 import java.util.ArrayList;
 import java.util.List;

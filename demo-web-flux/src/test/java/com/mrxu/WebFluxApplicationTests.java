@@ -1,10 +1,10 @@
-package com.example;
+package com.mrxu;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoWebFluxApplicationTests {
+class WebFluxApplicationTests {
 
     @Test
     void contextLoads() {

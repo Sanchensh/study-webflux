@@ -1,5 +1,5 @@
-package com.example.handler;
-import com.example.component.UserComponent;
+package com.mrxu.handler;
+import com.mrxu.component.UserComponent;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;

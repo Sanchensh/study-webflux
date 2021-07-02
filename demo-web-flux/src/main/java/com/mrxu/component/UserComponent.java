@@ -1,7 +1,7 @@
-package com.example.component;
+package com.mrxu.component;
 
-import com.example.pojo.User;
-import com.example.service.UserService;
+import com.mrxu.pojo.User;
+import com.mrxu.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;

@@ -1,13 +1,14 @@
-package com.example.controller;
+package com.mrxu.controller;
 
-import com.example.pojo.User;
-import com.example.service.HelloService;
+import com.mrxu.pojo.User;
+import com.mrxu.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
+@CrossOrigin
 public class HelloController {
     @Autowired
     private HelloService service;

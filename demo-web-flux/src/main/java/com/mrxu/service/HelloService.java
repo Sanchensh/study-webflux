@@ -1,6 +1,6 @@
-package com.example.service;
+package com.mrxu.service;
 
-import com.example.pojo.User;
+import com.mrxu.pojo.User;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
