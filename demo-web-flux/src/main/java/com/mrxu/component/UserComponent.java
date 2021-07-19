@@ -17,26 +17,27 @@ public class UserComponent {
     @Autowired
     private UserService service;
 
-    public Mono<ServerResponse> insert(ServerRequest serverRequest){
+    public Mono<ServerResponse> insert(ServerRequest serverRequest) {
         Mono<User> user = serverRequest.bodyToMono(User.class);
         return ok().build(user.doOnNext(u -> service.insert(u)).then());
     }
+
     public Mono<ServerResponse> update(ServerRequest serverRequest) {
         Mono<User> user = serverRequest.bodyToMono(User.class);
         return ok().build(user.doOnNext(u -> service.update(u)).then());
     }
 
-    public Mono<ServerResponse> delete(ServerRequest serverRequest){
+    public Mono<ServerResponse> delete(ServerRequest serverRequest) {
         String id = serverRequest.pathVariable("id");
         return ok().build(service.delete(id));
     }
 
-    public Mono<ServerResponse> find(ServerRequest serverRequest){
+    public Mono<ServerResponse> find(ServerRequest serverRequest) {
         String id = serverRequest.pathVariable("id");
-        return ok().contentType(MediaType.APPLICATION_JSON).body(Mono.fromSupplier(() -> service.find(id)),User.class);
+        return ok().contentType(MediaType.APPLICATION_JSON).body(Mono.fromSupplier(() -> service.find(id)), User.class);
     }
 
-    public Mono<ServerResponse> findAll(ServerRequest serverRequest){
-        return ok().contentType(MediaType.APPLICATION_JSON).body(Flux.fromStream(() -> service.findAll().stream()),User.class);
+    public Mono<ServerResponse> findAll(ServerRequest serverRequest) {
+        return ok().contentType(MediaType.APPLICATION_JSON).body(Flux.fromStream(() -> service.findAll().stream()), User.class);
     }
 }
